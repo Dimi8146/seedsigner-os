@@ -41,10 +41,16 @@ If you're unsure, most people should specify `pi0`.
 export BOARD_TYPE=pi0
 ```
 
+Set the version number.
+
+```bash
+export SS_ARGS="--$BOARD_TYPE --app-branch=0.7.0"
+```
+
 Start the build!
 
 ```bash
-SS_ARGS="--$BOARD_TYPE --app-branch=0.7.0" docker compose up --force-recreate --build
+docker compose up --force-recreate --build
 ```
 
 Building can take 25min to 2.5hrs+ depending on your cpu and will require 20-30 GB of disk space.
@@ -90,10 +96,16 @@ If you're unsure, most people should specify `pi0`.
 $env:BOARD_TYPE = 'pi0'
 ```
 
+Set the version number.
+
+```powershell
+$env:SS_ARGS="--%BOARD_TYPE% --app-branch=0.7.0"
+```
+
 Start the build!
 
 ```powershell
-$env:SS_ARGS="--%BOARD_TYPE% --app-branch=0.7.0" ; docker compose up --force-recreate --build
+docker compose up --force-recreate --build
 ```
 
 Building can take 25min to 2.5hrs+ depending on your cpu and will require 20-30 GB of disk space.
